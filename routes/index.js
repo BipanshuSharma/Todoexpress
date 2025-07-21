@@ -19,4 +19,12 @@ router.post('/add', function(req, res) {
   res.redirect('/');
 }); 
 
+// deletebutton
+
+router.post('/delete/:index', (req, res) => {
+  const index = req.params.index;
+  todos.splice(index, 1); 
+  res.redirect('/');
+});
+
 module.exports = router;
